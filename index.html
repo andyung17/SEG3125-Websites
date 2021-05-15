@@ -8,14 +8,19 @@
 
 <body>
 
+
     <h1>Survey</h1> <br>
+
+    <img class="center" src="images/iphone-12-purple.jpg" width="
+    800" height="800" alt="iphone-12-purple">
+
     <form id="form" action="index.php">
 
-    <ol>    
-        <li>
-            <h3>How often do you use our website?</h3>
+    <ol class="center" class="centerButton">    
+        <ol>
+            <h3 class="centerButton">How often do you use our website?</h3>
             <div>
-                <input type="radio" name="question-1-answer" id="question-1-answers-A" value="A">
+                <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A">
                 <label for="question-1-answers-A">0-2 times a week</label>
             </div>
             <div>
@@ -34,11 +39,10 @@
                 <input type="radio" name="question-1-answers" id="question-1-answers-E" value="E">
                 <label for="question-1-answers-E">8+ times a week</label>
             </div>
-        </li>
+        </ol>
     </ol>
-
+    <H3 class="center">How satisified are you with our service?</H3>
     <div class="rating-box">
-        <H3>How satisified are you with our service?</H3>
         <div class="rating">
             <input type="radio" name="rating" id="rate10"><label for="rate10">10</label>
             <input type="radio" name="rating" id="rate9"><label for="rate9">9</label>
@@ -52,13 +56,27 @@
             <input type="radio" name="rating" id="rate1"><label for="rate1">1</label>
         </div>
     </div>
+    <div>
+        <label for="product" class="center">Choose a type of product</label>
+        <select class="center" name="iPhone" id="cars">
+        <option value="iPad">iPhone</option>
+        <option value="iPad">iPad</option>
+        <option value="iMac">iMac</option>
+        <option value="Apple Watch">Apple Watch</option>
+        <option value="iOS Software">iOS Software</option>
+        </select>
+    </div>
+    <h3 class="center">Addtional Comments</h3>
+    <input type="text" name="Comments" class="center">
+
 </form>
 
 
 
     </div>
 
-    <input type="submit" value="Submit Quiz"/>
+    <br>
+    <input type="submit" value="Submit Quiz" class="centerButton"/>
 
     <footer>
         <p> Hugh Jackman 
