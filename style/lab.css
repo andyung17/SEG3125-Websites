@@ -10,14 +10,70 @@ body
     font-family: Arial;
 }
 
+img{
+    border: black;
+    height: auto;
+    width: auto;
+}
+
+.body{
+    background:#ffffff;
+}
+
+.form{
+    background: #fccafc;
+}
+
+.footer{
+    font-family: Arial;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+input[type=submit]{
+    align-items: center;
+    text-align: center;
+    font-family: Arial;
+    justify-content:center;
+    height: 50px;
+    width: 100px;
+    border-width: medium;
+    padding: 2px;
+}
+
+input[type=text]{
+    font-family: Arial;
+    height: 100px;
+    width: 400px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    border-width: medium;
+    padding: 2px;
+}
+
 .centerButton{
     display: block;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-family: Arial;
+    font-size: 16px;
+}
+
+.logo{
+    display: block;
+    font-family: Arial;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 15%;
 }
 
 .center{
     display: block;
+    font-family: Arial;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 50%;

@@ -3,22 +3,20 @@
 
 <head>
     <link href="style/lab.css" rel="stylesheet" type="text/css">
-    <title>Survey</title>
 </head>
 
-<body>
+<body class="body">
 
 
-    <h1>Survey</h1> <br>
+    <h1>Survey for <a href="apple.com/ca/">Apple.com</a></h1> <br>
 
-    <img class="center" src="images/iphone-12-purple.jpg" width="
-    800" height="800" alt="iphone-12-purple">
-
-    <form id="form" action="index.php">
-
-    <ol class="center" class="centerButton">    
+    <img class="logo" src="images/Apple_logo_black.png" alt="apple logo">
+    <br><br>
+    <form id="form" class="form" action="index.php">
+<br><br>
+        <h3 class="center">How often do you use our website?</h3>
+    <ol class="center">    
         <ol>
-            <h3 class="centerButton">How often do you use our website?</h3>
             <div>
                 <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A">
                 <label for="question-1-answers-A">0-2 times a week</label>
@@ -41,6 +39,33 @@
             </div>
         </ol>
     </ol>
+
+    <H3 class="center">Which Products do you Own?</H3>
+    <div class="center">
+        <input type="checkbox" id="iPhone" name="phone" value="iPhone">
+        <label for="phone"> I have an iPhone</label><br>
+        <input type="checkbox" id="iPad" name="tablet" value="iPad">
+        <label for="tablet"> I have an iPad</label><br>
+        <input type="checkbox" id="iMac" name="computer" value="iMac">
+        <label for="computer"> I have an iMac</label><br>
+        <input type="checkbox" id="AppleWatch" name="accessories" value="AppleWatch">
+        <label for="accessories"> I have an Apple Watch</label>
+    </div>
+
+    <div>
+        <h3 class="center">One favourite part of the new iPhone</h3>
+        <label for="product" class="center"></label>
+        <select class="center" name="iPhone" id="cars">
+        <option value="colour">Colour</option>
+        <option value="NewFeatures">New Features</option>
+        <option value="Battery">Battery Life</option>
+        <option value="Size">Size</option>
+        </select>
+    </div>
+
+    <h3 class="center">Addtional Comments</h3>
+    <input type="text" name="Comments" class="center">
+
     <H3 class="center">How satisified are you with our service?</H3>
     <div class="rating-box">
         <div class="rating">
@@ -56,19 +81,8 @@
             <input type="radio" name="rating" id="rate1"><label for="rate1">1</label>
         </div>
     </div>
-    <div>
-        <label for="product" class="center">Choose a type of product</label>
-        <select class="center" name="iPhone" id="cars">
-        <option value="iPad">iPhone</option>
-        <option value="iPad">iPad</option>
-        <option value="iMac">iMac</option>
-        <option value="Apple Watch">Apple Watch</option>
-        <option value="iOS Software">iOS Software</option>
-        </select>
-    </div>
-    <h3 class="center">Addtional Comments</h3>
-    <input type="text" name="Comments" class="center">
 
+    <br><br>
 </form>
 
 
@@ -78,7 +92,7 @@
     <br>
     <input type="submit" value="Submit Quiz" class="centerButton"/>
 
-    <footer>
+    <footer class="footer">
         <p> Hugh Jackman 
             <br>
             <a href="hughjackman@gmail.com">hughjackman@gmail.com</a>
