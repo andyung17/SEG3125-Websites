@@ -8,6 +8,7 @@ h1{
 body
 {
     font-family: Arial;
+    background: #fccafc;
 }
 
 img{
@@ -17,11 +18,11 @@ img{
 }
 
 .body{
-    background:#ffffff;
+    background: #947143;
 }
 
 .form{
-    background: #fccafc;
+    background: #ddaf72;
 }
 
 .footer{
@@ -67,7 +68,7 @@ input[type=text]{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 15%;
+    width: 50%;
 }
 
 .center{
@@ -77,6 +78,15 @@ input[type=text]{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.center-drop{
+    display: block;
+    font-family: Arial;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
 }
 
 .rating-box{
