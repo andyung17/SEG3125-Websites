@@ -83,20 +83,61 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
+function restrictListProducts(restriction, prods, restriction2, check, default_choice) {
 	let product_names = [];
 
 	prods.sort((a, b) => {return a.price - b.price});
 
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "lactoseFree") && (prods[i].lactoseFree == true)){
-			product_names.push(prods[i]);
+		if(default_choice == true){
+			if(check == true){
+				if(prods[i].organic == true){
+					product_names.push(prods[i]);
+				}
+			}
+			else{
+				product_names.push(prods[i]);
+			}
 		}
-		else if ((restriction == "nutFree") && (prods[i].nutFree == true)){
-			product_names.push(prods[i]);
+		else if((restriction == true) && (prods[i].lactoseFree == true) && (restriction2 == true) && (prods[i].nutFree == true)){
+				if(check == true){
+					if(prods[i].organic == true){
+						product_names.push(prods[i]);
+					}
+				}
+				else{
+					product_names.push(prods[i]);
+				}
 		}
-		else if (restriction == "None"){
-			product_names.push(prods[i]);
+		else if ((restriction == true) && (prods[i].lactoseFree == true)){
+			if(check == true){
+				if(prods[i].organic == true){
+					product_names.push(prods[i]);
+				}
+			}
+			else{
+				product_names.push(prods[i]);
+			}
+		}
+		else if ((restriction2 == true) && (prods[i].nutFree == true)){
+			if(check == true){
+				if(prods[i].organic == true){
+					product_names.push(prods[i]);
+				}
+			}
+			else{
+				product_names.push(prods[i]);
+			}
+		}
+		else if ((restriction2 == false) && (restriction == false)){
+			if(check == true){
+				if(prods[i].organic == true){
+					product_names.push(prods[i]);
+				}
+			}
+			else{
+				product_names.push(prods[i]);
+			}
 		}
 
 	}

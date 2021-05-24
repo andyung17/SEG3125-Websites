@@ -27,15 +27,19 @@ function openInfo(evt, tabName) {
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
-function populateListProductChoices(slct1, slct2) {
-    var s1 = document.getElementById(slct1);
-    var s2 = document.getElementById(slct2);
+function populateListProductChoices(slct1, slct2, slct3, slct4, slct5) {
+    var s1 = document.getElementById(slct1); //Lactose Free
+    var s2 = document.getElementById(slct2); // prods
+	var s3 = document.getElementById(slct3); // Nut Free
+	var s4 = document.getElementById(slct4); //Organic 
+	var s5 = document.getElementById(slct5); //None 
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
-		
+
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value);
+	var optionArray = restrictListProducts(s1.checked, products, s3.checked, s4.checked, s5.checked);
+
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
@@ -90,7 +94,7 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
 		
 }
 
