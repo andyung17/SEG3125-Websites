@@ -85,17 +85,22 @@ var products = [
 
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
+
+	prods.sort((a, b) => {return a.price - b.price});
+
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "lactoseFree") && (prods[i].lactoseFree == true)){
-			product_names.push(prods[i].name);
+			product_names.push(prods[i]);
 		}
 		else if ((restriction == "nutFree") && (prods[i].nutFree == true)){
-			product_names.push(prods[i].name);
+			product_names.push(prods[i]);
 		}
 		else if (restriction == "None"){
-			product_names.push(prods[i].name);
+			product_names.push(prods[i]);
 		}
+
 	}
+
 	return product_names;
 }
 

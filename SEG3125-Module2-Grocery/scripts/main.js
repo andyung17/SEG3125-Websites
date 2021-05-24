@@ -43,9 +43,10 @@ function populateListProductChoices(slct1, slct2) {
 		
 	for (i = 0; i < optionArray.length; i++) {
 			
-		var productName = optionArray[i];
+		var productName = optionArray[i].name;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
+		var productPrice = optionArray[i].price;
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
@@ -55,6 +56,7 @@ function populateListProductChoices(slct1, slct2) {
 		var label = document.createElement('label')
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName));
+		label.appendChild(document.createTextNode(" : $"+productPrice+" "));
 		s2.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM
