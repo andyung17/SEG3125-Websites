@@ -8,7 +8,7 @@
 <body onload= "populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">
 
 <!-- Tab links, each one with an onclick event associated with it -->
-<div class="square" id="whiteBack">
+<div class="square">
   <h1>SEG-Market</h1>
   <img class="center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMdoKF45gsWrPPpjK1GVlXyP9vam1dfswkVBvTn5icENcq4pm03EJcyylLJ2XnYmvKDfY&usqp=CAU" height="30%" width="30%">
   <br>
@@ -20,58 +20,60 @@
 
 
   <!-- Tab content -->
-  <div id="Client" class="tabcontent">
-    <h3><u>Client Information</u></h3>
-    <p>Tell us a bit about you.</p><br>
-    Are you Lactose Intolerant <br>
-    <form>    
-      <input type="radio" id="YesLactose" name="lactoseFree" value="YesLactose" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">Yes
-      <input type="radio" id="NoLactose" name="lactoseFree" value="NoLactose" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">No
-    </form>
+  <div id="colour">
+    <div id="Client" class="tabcontent">
+      <h3><u>Client Information</u></h3>
+      <p>Tell us a bit about you.</p><br>
+      Are you Lactose Intolerant <br>
+      <form>    
+        <input type="radio" id="YesLactose" name="lactoseFree" value="YesLactose" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">Yes
+        <input type="radio" id="NoLactose" name="lactoseFree" value="NoLactose" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">No
+      </form>
+      <br>
+      <form>
+        Are you Nut Intolerant <br>
+        <input type="radio" id="nutFreeNo" name="nutFree" value="nutFreeNo" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">Yes
+        <input type="radio" id="nutFreeYes" name="nutFree" value="nutFreeYes" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">No
+      </form>
+  
+      <!-- Lactose Free: <input class="checkboxbtn" type="checkbox" id="lactoseFree" name="lactoseFree" value="lactoseFree"
+      onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFreeNo','Organic')">
     <br>
-    <form>
-      Are you Nut Intolerant <br>
-      <input type="radio" id="nutFreeNo" name="nutFree" value="nutFreeNo" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">Yes
-      <input type="radio" id="nutFreeYes" name="nutFree" value="nutFreeYes" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">No
-    </form>
-
-    <!-- Lactose Free: <input class="checkboxbtn" type="checkbox" id="lactoseFree" name="lactoseFree" value="lactoseFree"
-    onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFreeNo','Organic')">
-  <br>
-    Nut Free: <input class="checkboxbtn" type="checkbox" id="nutFree" name="nutFree" value="nutFree"
-    onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')"> -->
-
-
-    <!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'Organic')">
-    <option value=""></option>
-    <option value="lactoseFree">LactoseFree</option>
-      <option value="nutFree">NutFree</option>
-      <option value="None">None</option>
-    </select><br> -->
-    <p>Choose any dietary preferences:</p>
-    Organic: <input class="checkboxbtn" type="checkbox" id="Organic" name="Organic" value="Organic"
-    onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">
-    <button class="Next" id="Client-Open" onclick="openInfo(event, 'Products'); clickButton();" type="button" >Next</button>
-  </div>
-
-  <div id="Products" class="tabcontent">
-    <h3><u>Your targeted products</u></h3>
-    <p>We preselected products based on your restrictions.</p>
-    Choose items to buy:<br>
-    <div id="displayProduct"></div>
-    <br><br>
-    <button class="Previous" id="Previous" onclick="openInfo(event, 'Client');defaultOpen();" type="button" >Previous</button>
-    <button class="Next" id="addCart" onclick="selectedItems();openInfo(event, 'Cart');clickButton2();" type="button" >Next</button>
-
-  </div>
-
-  <div id="Cart" class="tabcontent">
-    <h3><u>Cart</u></h3>
-    <p>Here is your cart.</p>
-    <div id="displayCart">
+      Nut Free: <input class="checkboxbtn" type="checkbox" id="nutFree" name="nutFree" value="nutFree"
+      onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')"> -->
+  
+  
+      <!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'Organic')">
+      <option value=""></option>
+      <option value="lactoseFree">LactoseFree</option>
+        <option value="nutFree">NutFree</option>
+        <option value="None">None</option>
+      </select><br> -->
+      <p>Choose any dietary preferences:</p>
+      Organic: <input class="checkboxbtn" type="checkbox" id="Organic" name="Organic" value="Organic"
+      onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">
+      <button class="Next" id="Client-Open" onclick="openInfo(event, 'Products'); clickButton();" type="button" >Next</button>
     </div>
-    <br><br>
-    <button class="Previous2" id="Previous2" onclick="openInfo(event, 'Client');clickButton();" type="button" >Previous</button>
+  
+    <div id="Products" class="tabcontent">
+      <h3><u>Your targeted products</u></h3>
+      <p>We preselected products based on your restrictions.</p>
+      Choose items to buy:<br>
+      <div id="displayProduct"></div>
+      <br><br>
+      <button class="Previous" id="Previous" onclick="openInfo(event, 'Client');defaultOpen();" type="button" >Previous</button>
+      <button class="Next" id="addCart" onclick="selectedItems();openInfo(event, 'Cart');clickButton2();" type="button" >Next</button>
+  
+    </div>
+  
+    <div id="Cart" class="tabcontent">
+      <h3><u>Cart</u></h3>
+      <p>Here is your cart.</p>
+      <div id="displayCart">
+      </div>
+      <br><br>
+      <button class="Previous2" id="Previous2" onclick="openInfo(event, 'Client');clickButton();" type="button" >Previous</button>
+    </div>
   </div>
 </div>
 
