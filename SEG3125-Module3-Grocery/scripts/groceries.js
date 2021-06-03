@@ -13,22 +13,22 @@ var products = [
 	},
 	{
 		name: "Organic Apples",
-		lactoseFree: false,
-		nutFree: false,
+		lactoseFree: true,
+		nutFree: true,
 		organic: true,
 		price: 1.65
 	},
 	{
 		name: "Organic Tomato",
-		lactoseFree: false,
-		nutFree: false,
+		lactoseFree: true,
+		nutFree: true,
 		organic: true,
 		price: 2.65
 	},
 	{
 		name: "Bread",
 		lactoseFree: true,
-		nutFree: false,
+		nutFree: true,
 		organic: false,
 		price: 2.35
 	},
@@ -57,6 +57,13 @@ var products = [
 	{
 		name: "Nut-Free Chocolate",
 		lactoseFree: true,
+		nutFree: true,
+		organic: false,
+		price: 3.25
+	},
+	{
+		name: "Milk Chocolate",
+		lactoseFree: false,
 		nutFree: false,
 		organic: false,
 		price: 3.25
