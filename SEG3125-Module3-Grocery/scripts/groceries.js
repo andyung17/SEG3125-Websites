@@ -55,6 +55,13 @@ var products = [
 		price: 3.22
 	},
 	{
+		name: "Nut-Free Chocolate",
+		lactoseFree: true,
+		nutFree: false,
+		organic: false,
+		price: 3.25
+	},
+	{
 		name: "Lactose-Free Milk",
 		lactoseFree: true,
 		nutFree: true,
