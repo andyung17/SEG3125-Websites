@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload= "populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="square" id="whiteBack">
+  <h1>SEG-Market</h1>
+  <img class="center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMdoKF45gsWrPPpjK1GVlXyP9vam1dfswkVBvTn5icENcq4pm03EJcyylLJ2XnYmvKDfY&usqp=CAU" height="30%" width="30%">
+  <br>
+  <div class="tab">
+    <button class="tablinks" id="defaultOpen" onclick="openInfo(event, 'Client')">Client</button>
+    <button class="tablinks" id="Products_Page" onclick="openInfo(event, 'Products')">Products</button>
+    <button class="tablinks" id="Carts_Page" onclick="openInfo(event, 'Cart')">Cart</button>
+  </div>
+
+
+  <!-- Tab content -->
+  <div id="Client" class="tabcontent">
+    <h3><u>Client Information</u></h3>
+    <p>Tell us a bit about you.</p><br>
+    Are you Lactose Intolerant <br>
+    <form>    
+      <input type="radio" id="YesLactose" name="lactoseFree" value="YesLactose" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">Yes
+      <input type="radio" id="NoLactose" name="lactoseFree" value="NoLactose" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">No
+    </form>
+    <br>
+    <form>
+      Are you Nut Intolerant <br>
+      <input type="radio" id="nutFreeNo" name="nutFree" value="nutFreeNo" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">Yes
+      <input type="radio" id="nutFreeYes" name="nutFree" value="nutFreeYes" onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">No
+    </form>
+
+    <!-- Lactose Free: <input class="checkboxbtn" type="checkbox" id="lactoseFree" name="lactoseFree" value="lactoseFree"
+    onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFreeNo','Organic')">
+  <br>
+    Nut Free: <input class="checkboxbtn" type="checkbox" id="nutFree" name="nutFree" value="nutFree"
+    onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')"> -->
+
+
+    <!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'Organic')">
+    <option value=""></option>
+    <option value="lactoseFree">LactoseFree</option>
+      <option value="nutFree">NutFree</option>
+      <option value="None">None</option>
+    </select><br> -->
+    <p>Choose any dietary preferences:</p>
+    Organic: <input class="checkboxbtn" type="checkbox" id="Organic" name="Organic" value="Organic"
+    onchange="populateListProductChoices('lactoseFree', 'displayProduct', 'nutFree','Organic')">
+    <button class="Next" id="Client-Open" onclick="openInfo(event, 'Products'); clickButton();" type="button" >Next</button>
+  </div>
+
+  <div id="Products" class="tabcontent">
+    <h3><u>Your targeted products</u></h3>
+    <p>We preselected products based on your restrictions.</p>
+    Choose items to buy:<br>
+    <div id="displayProduct"></div>
+    <br><br>
+    <button class="Previous" id="Previous" onclick="openInfo(event, 'Client');defaultOpen();" type="button" >Previous</button>
+    <button class="Next" id="addCart" onclick="selectedItems();openInfo(event, 'Cart');clickButton2();" type="button" >Next</button>
+
+  </div>
+
+  <div id="Cart" class="tabcontent">
+    <h3><u>Cart</u></h3>
+    <p>Here is your cart.</p>
+    <div id="displayCart">
+    </div>
+    <br><br>
+    <button class="Previous2" id="Previous2" onclick="openInfo(event, 'Client');clickButton();" type="button" >Previous</button>
+  </div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+<script>document.getElementById("defaultOpen").click();</script>
+<script>function clickButton(){
+  document.getElementById("Products_Page").click();
+}
+</script>
+<script>function clickButton2(){
+  document.getElementById("Carts_Page").click();
+}
+</script>
+<script>function defaultOpen(){
+  document.getElementById("defaultOpen").click();
+}
+</script>
+
+</body>
+
+  <footer>
+    <p>Designed by: Paul Blart</p>
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+  </footer>
+
+
+</html>
