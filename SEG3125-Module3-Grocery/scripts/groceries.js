@@ -5,21 +5,21 @@
 var products = [
 	//Organic 
 	{
-		name: "Brocoli",
+		name: "Organic Brocoli",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
 		price: 1.99
 	},
 	{
-		name: "Apples",
+		name: "Organic Apples",
 		lactoseFree: false,
 		nutFree: false,
 		organic: true,
 		price: 1.65
 	},
 	{
-		name: "Tomato",
+		name: "Organic Tomato",
 		lactoseFree: false,
 		nutFree: false,
 		organic: true,
@@ -53,6 +53,13 @@ var products = [
 		nutFree: true,
 		organic: false,
 		price: 3.22
+	},
+	{
+		name: "Lactose-Free Milk",
+		lactoseFree: true,
+		nutFree: true,
+		organic: false,
+		price: 4.00
 	},
 	{
 		name: "Cheese",
