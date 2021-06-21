@@ -1,9 +1,9 @@
-<!-- This file contains a few elements adapted from the online tutoral -->
+<!-- This file contains many elements adapted from the online tutoral -->
 <!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
-<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
 
 <!-- Images source: -->
-<!-- The two icons come from this bank of icons: https://icons8.com/icons.  I used the free downloadable ones.-->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,84 +16,262 @@
 
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
-
-    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
-    <!-- which is built on top of JQuery and offers additional possibilities -->
-    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
-    <!-- Your own script -->
-    <script src="scripts/service.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+    <script src="main.js"></script>   
 
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
+
 <body>
+    <nav class="navbar navbar-expand-md p-3 my-3 ">
+        <img src="images/pet-house3.png" width="70" height=auto>
+        <h1> Turbo Vet</h1>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <h3><i class="far fa-envelope" style="color:#593185"></i> &#128231; inquiries@turbovet.ca</h3>     
+                </li>
+                <li class="nav-item">
+                    <h3><i class="fas fa-phone" style="color:#593185"></i> 	&#128241; (613)-455-6298</h3>
+                </li>
+            </ul>
+        </div>
 
-<!-- Using the collapsible Navbar, so we see the hamburger menu icon -->
-<!-- It really has become a standard. -->
-<!-- As your page is a vertical page (Module 4 requirement), you mus use the navbar -->
-<!-- to just jump to parts of the page. What I put as First/Second/Third here would -->
-<!-- be sections in your page. -->
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#first"><img src="images/peigne.png" alt="logo" style="width:30px;">First</a>
-      </li> 
-      <li class="nav-item">
-        <a class="nav-link" href="#second"><img src="images/tiger.png" alt="logo" style="width:30px;">Second</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#third">Third</a>
-      </li>   
-   </ul>
-  </div>  
-</nav>
-<br>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#ourService" style=" color: black;"><img src="images/sethoscope_adobespark.png" alt="logo" style="width:30px;color:black;"><u>Services</u></a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#vets-title " style=" color: black;"><img src="images/vetIcon.png" alt="logo" style="width:30px;color:black;"><u>Team</u></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#bookAppoint" style=" color: black;"><img src="images/calender.png" alt="logo" style="width:30px;color:black;"> <u>Appointment</u></a>
+              </li>   
+           </ul>
+          </div>  
 
-<!-- Just arbitrary divisions to see the link from the NavBar -->
-<!-- Also, notice the use of the icon repeated from the menu to add grouping -->
-<div class="container" id="first">
-  <h3><img src="images/peigne.png" alt="logo" style="width:40px;">First Item</h3>
-  <p>Display text 1 </p>
-  <p>Display text 2 </p>
-  <p>Display text 3 </p>
-  <p>Display text 4 </p>
-  <p>Display text 5 </p>
-  <p>Display text 6 </p>
-</div>
+    </nav>
 
-<div class="container" id="second">
-  <h3><img src="images/tiger.png" alt="logo" style="width:40px;">Second Item</h3>
-  <p>Display text 1 </p>
-  <p>Display text 2 </p>
-  <p>Display text 3 </p>
-  <p>Display text 4 </p>
-  <p>Display text 5 </p>
-  <p>Display text 6 </p>
-</div>
+        <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
+    <!-- These can be useful for making sure someone reads something before continuing -->
+    <div class="container">
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <i class="material-icons">&#xe002;</i>
+            <strong>Open! </strong> We are still offering our services during stage one of re-opening.
+        </div>
+    </div>
 
-<!-- This section contains elements to be validated -->
-<!-- Refer to the JavaScript file, where JQuery is used to listen to those inputs using the ids -->
-<div class="container" id="third">
-  <h3>Third Item</h3>
-  <p>Date: <input type="text" id="dateInput"></p>
-  <p>Phone Number Example <input value="(1234)" type="text" id="phone"></p>
-  <p>Credit Card: <input type="text" id="debit" title="We ask for your credit card number in case of no-show, 20$ will be charged."></p>
-</div>
+    <div class="location p-3 my-3  bg-light">
+        <p class="h3 text-center">Our Location</p>
+        <div class = "container">
+            <div class = "row justify-content-center">
+                <div class="col-xl">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.24612472882!2d-75.6885226486918!3d45.424539678997974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce050684c71d83%3A0xdd3b5f2536e96216!2sTabaret%20Hall%20(TBT)!5e0!3m2!1sen!2sca!4v1623083031418!5m2!1sen!2sca" 
+                    width="500" height="300" style="border:0;width:100%" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <br>
+                <div class = "col">
+                    <br>
+                    <u class="pink h4">Our Hours:</u>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 14px;">550 Cumberland Street, Ottawa, ON K1N 6N8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                    <u class="pink h4">Hours:</u>
+                    <table>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 11px;">Monday-Friday</td>
+                                    <td>8am-6pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>9am-5pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>Closed</td>
+                                </tr>
+                                <tr>
+                                    <td>Holidays</td>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </table>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <br>
+        <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+    <div class="container">
+        <div class="container-md p-3 my-3 border pinkDye text-white">
+            <h3 id="ourService" style="color: black;"><img src="images/sethoscope_adobespark.png" width="70" height=auto> Our Services</h3>
+        </div>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapseService" data-toggle="collapse" href="#surgery1" style="color: black;">Ophthalmic Surgery</a>
+                </div>
+                <div id="surgery1" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p><strong>Cost of Procedure:</strong> $2,000 - $4,000 <br>This surgery is preformed eyes.</p>
+                        <img src="images/eyeball.png" class="imageservice" ">
+                    </div>
+                </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapseService" data-toggle="collapse" href="#surgery2" style="color: black;">Orthopaedic Surgery</a>
+                </div>
+                <div id="surgery2" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p><strong>Cost of Procedure:</strong> $100 - $3,000 <br>This surgery is for the bones, joints, tendons and muscles.</p>
+                        <img src="images/bone.jpg" class="imageservice" ">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapseService" data-toggle="collapse" href="#surgery3" style="color: black;">Cardiology Surgery</a>
+                </div>
+                <div id="surgery3" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p><strong>Cost of Procedure:</strong> $5,000 - $8,000 <br>This surgery is preformed on the heart or great vessels.</p>
+                        <img src="images/Cardiology.jpg" class="imageservice" ">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapseService" data-toggle="collapse" href="#surgery4" style="color: black;">Internal Organs Surgery</a>
+                </div>
+                <div id="surgery4" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p><strong>Cost of Procedure:</strong> $1,000 - $2,000 <br>This surgery is preformed on stomach and other internal organs.</p>
+                        <img src="images/cuteorgan.png" class="imageservice" ">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#surgery5" style="color: black;">Oncology Surgery</a>
+                </div>
+                <div id="surgery5" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p><strong>Cost of Procedure:</strong> $3,000 - $10,000 <br>This surgery is for tumors and tissue damage.</p>
+                        <img src="images/brain.png" class="imageservice" ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container-md p-3 my-3 border pinkDye text-white">
+        <h3 class="vets-title" id="vets-title" style="color:black;"><img src="images/vetIcon.png" width="70" height=auto> Meet the Veterinarians</h3>
+    </div>
+    
+    <br><div class="vets row justify-content-around">
+        <div class="card" style="width: 18rem; border-color: #ee7a8e; border-width: 2px;">
+            <img src="images/julia.jpg" class="mx-auto card-img-top crop" alt="Dr. Meredith Grey" style="object-position: 25%; margin-top: 20px; width:200px; height: 200px;">
+            <div class="card-body">
+                <h5>Dr. Anne Limnae</h5>
+                <h6>Registered Veterinarian</h6>
+                <p class="card-text" style="margin-top: 20px;">Anne Limnae graduated from the University of Washington in 1985. Meredith is very experienced and is gentle and caring to all her patients.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; border-color: #ee7a8e; border-width: 2px;">
+            <img src="images/cameron.jpg" class="mx-auto card-img-top crop" alt="Dr. Cristina Yang" style="object-position: 65%; margin-top: 20px; width:200px; height:200px;">
+            <div class="card-body">
+                <h5>Dr. Cameron Roy</h5>
+                <h6>Registered Veterinarian</h6>
+                <p class="card-text" style="margin-top: 20px;"> Cameron Roy graduated with a honors from the college of veterinary medicine. He enjoys educating clients about the care of their pets, helping them to better understand preventive medicine.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; border-color:#ee7a8e; border-width: 2px;">
+            <img src="images/meghan.jpg" class="mx-auto card-img-top crop" alt="Dr. Derek Shepherd" style="object-position: 50%; margin-top: 20px; width: 200px; height:200px;">
+            <div class="card-body">
+                <h5>Dr. Meghan Clark</h5>
+                <h6>Registered Veterinarian</h6>
+                <p class="card-text" style="margin-top: 20px;">Meghan Clark has been practicing small animal medicine for more than 10 years. She recently just graduated from the Veterinarian program at McMaster.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="bg-img">
+        <form action="" class="form-container">
+            <div class="container-md p-3 my-3 border pinkDye text-white">
+                <h3 id="bookAppoint" style="color:black"><img src="images/calender.png" width="70" height=auto> Book an Appointment</h3>
+            </div>
+            <div class="form-group">
+              <input type="name" class="form-control" id="nameInput" placeholder="Enter Full Name">
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="genderSelect">
+                <option disabled selected>Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <input type="phone" class="form-control" id="phoneInput" placeholder="Enter Mobile (123-456-7890s)">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="emailInput" placeholder="Enter Email (name@mailsystem.com)">
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="serviceSelect">
+                    <option disabled selected>Select Service</option>
+                    <option>Ophthalmic Surgery</option>
+                    <option>Orthopaedic Surgery</option>
+                    <option>Cardiology Surgery</option>
+                    <option>Internal Organs Surgery</option>
+                    <option>Oncology Surgery</option>
+                  </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="doctorSelect">
+                    <option disabled selected>Select Doctor</option>
+                    <option>Dr. Anne Limnae</option>
+                    <option>Dr. Cameron Roy</option>
+                    <option>Dr. Meghan Clark</option>
+                  </select>
+            </div>
+            <div class="form-group">
+                <label for="appointment-input" style="color:#404040">Preferred Date of Appointment:</label>
+                <input class="form-control" type="datetime-local" id="appointmentDate">
+            </div>
+            <div id="phone_error" class="error hidden" width="70%" height="70%" style="color: red;"></div>
+            <div class="form-group">
+                <button type="button" style="background-color: #FFC0CB ;" class="btn" onclick="validateAll()">BOOK APPOINTMENT</button>
+            </div>
+          </form>
+    </div>
+
 
 </body>
 </html>
-
-

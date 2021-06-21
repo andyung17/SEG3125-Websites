@@ -4,25 +4,80 @@
 */
 
 /* Bootstrap default font-family is Helvetica Neue */
-h1 {
-  font-family: "Times New Roman", Times, serif;
-	/* font-size: 60px;
-	text-align: center;
-	margin: 0;
-	padding: 20px 0;
-  color: #ff00ff;  
-  */
-  text-shadow: 3px 3px 1px black;
+
+.header{
+  background-color: purple;
 }
 
-.error {
-  background-color: yellow;
-  color : red;
+.navbar{
+  margin: 0;
+  background-color: #FFC0CB;
+}
+
+.alert{
+  background-color: #ee7a8e;
+}
+
+.pink{
+  margin: auto;
+  left:0;
+  align-items: center;
+  color: black ;
+}
+
+.pinkDye{
+  background-color: #FFC0CB ;
+}
+
+.location{
+  width:75%;
+  margin: auto;
+  left:0;
+}
+
+.vets{
+  margin: auto;
+  left:0;
+}
+
+.vets-title{
+  width:75%;
+}
+
+.imageservice{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 300px;
+}
+
+.material-icons{
+  text-align:center;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.nav-item {
+  margin-right: 1em !important;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.bg-img {
+  /*background-image: url("../images/physio.jpeg");*/
+
+  min-height: 570px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 
-.showInput {
-  background-color: pink;
-}
 
 
