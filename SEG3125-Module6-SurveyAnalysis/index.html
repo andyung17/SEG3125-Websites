@@ -1,0 +1,420 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Module 5 - Labo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  -->
+
+    <!-- Date Picker  -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/styles/datepicker.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Time Picker  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src="main.js"></script>  
+
+    <!-- Footer https://codepen.io/scanfcode/pen/MEZPNd-->
+</head>
+
+
+<body id="topbar">
+    <nav class="navbar navbar-expand-md p-3 my-3 ">
+        <img src="images/pet-house3.png" width="70" height=auto>
+        <h1> Turbo Vet</h1>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <h3><i class="far fa-envelope" style="color:#593185"></i> &#128231; inquiries@turbovet.ca</h3>     
+                </li>
+                <li class="nav-item">
+                    <h3><i class="fas fa-phone" style="color:#593185"></i> 	&#128241; (613)-455-6298</h3>
+                </li>
+            </ul>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#ourService" style=" color: black;"><img src="images/sethoscope_adobespark.png" alt="logo" style="width:30px;color:black;"><u>Services</u></a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#vets-title " style=" color: black;"><img src="images/vetIcon.png" alt="logo" style="width:30px;color:black;"><u>Team</u></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#bookAppoint" style=" color: black;"><img src="images/calender.png" alt="logo" style="width:30px;color:black;"> <u>Appointment</u></a>
+              </li>   
+           </ul>
+          </div>  
+
+    </nav>
+
+        <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
+    <!-- These can be useful for making sure someone reads something before continuing -->
+    <div class="container">
+        <div class="alert alert-danger alert-dismissible">
+            <i class="material-icons">&#xe002;</i>
+            <strong>Open! </strong> We are still offering our services during stage one of re-opening.
+        </div>
+    </div>
+
+    <div class="location p-3 my-3  bg-light" id="location">
+        <p class="h3 text-center">Our Location</p>
+        <div class = "container">
+            <div class = "row justify-content-center">
+                <div class="col-xl">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.24612472882!2d-75.6885226486918!3d45.424539678997974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce050684c71d83%3A0xdd3b5f2536e96216!2sTabaret%20Hall%20(TBT)!5e0!3m2!1sen!2sca!4v1623083031418!5m2!1sen!2sca" 
+                    width="500" height="300" style="border:0;width:100%" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <br>
+                <div class = "col">
+                    <br>
+                    <ol class="pink h4">Our Address:</ol>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 14px;">550 Cumberland Street, Ottawa, ON K1N 6N8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                    <ol class="pink h4">Our Hours:</ol>
+                    <table>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 11px;">Monday-Friday</td>
+                                    <td>10am-6pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>10am-6pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>Closed</td>
+                                </tr>
+                                <tr>
+                                    <td>Holidays</td>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </table>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container" id="accordionExample">
+        <div class="container-md p-3 my-3 border pinkDye text-white">
+            <h3 id="ourService" style="color: black;"><img src="images/sethoscope_adobespark.png" width="70" height=auto> Our Services</h3>
+        </div>
+        <div class="accordion-item pinkDye text-black">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <u>Ophthalmic Surgery</u>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Cost of Procedure:</strong> $2,000 - $4,000 <br>This surgery is preformed eyes.
+                <img src="images/eyeball.png" class="imageservice">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item pinkDye text-black">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+               <u>Orthopaedic Surgery</u>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Cost of Procedure:</strong> $100 - $3,000 <br>This surgery is for the bones, joints, tendons and muscles. <br>
+              <img src="images/bone.jpg" class="imageservice">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item pinkDye text-black">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <u>Cardiology Surgery</u>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Cost of Procedure:</strong> $5,000 - $8,000 <br>This surgery is preformed on the heart or great vessels.<br>
+              <img src="images/Cardiology.jpg" class="imageservice">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item pinkDye text-black">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <u>Internal Organs Surgery</u>
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Cost of Procedure:</strong> $1,000 - $2,000 <br>This surgery is preformed on stomach and other internal organs.<br>
+                <img src="images/cuteorgan.png" class="imageservice">
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item pinkDye text-black">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <u>Oncology Surgery</u>
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Cost of Procedure:</strong> $3,000 - $10,000 <br>This surgery is for tumors and tissue damage.</p>
+                <img src="images/brain.png" class="imageservice">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+
+    <br>
+    <div class="container">
+    <div class="container-md p-3 my-3 border pinkDye text-white">
+        <h3 class="vets-title" id="vets-title" style="color:black;"><img src="images/vetIcon.png" width="70" height=auto> Meet the Veterinarians</h3>
+    </div>
+    
+    <br><div class="vets row justify-content-around">
+        <div class="card" style="width: 18rem; border-color: #ee7a8e; border-width: 2px;">
+            <img src="images/julia.jpg" class="mx-auto card-img-top crop" alt="Dr. Meredith Grey" style="object-position: 25%; margin-top: 20px; width:200px; height: 200px;">
+            <div class="card-body">
+                <h5>Dr. Anne Limnae</h5>
+                <h6>Registered Veterinarian</h6>
+                <p class="card-text" style="margin-top: 20px;">Anne Limnae graduated from the University of Washington in 1985. Meredith is very experienced and is gentle and caring to all her patients.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; border-color: #ee7a8e; border-width: 2px;">
+            <img src="images/cameron.jpg" class="mx-auto card-img-top crop" alt="Dr. Cristina Yang" style="object-position: 65%; margin-top: 20px; width:200px; height:200px;">
+            <div class="card-body">
+                <h5>Dr. Cameron Roy</h5>
+                <h6>Registered Veterinarian</h6>
+                <p class="card-text" style="margin-top: 20px;"> Cameron Roy graduated with a honors from the college of veterinary medicine. He enjoys educating clients about the care of their pets, helping them to better understand preventive medicine.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; border-color:#ee7a8e; border-width: 2px;">
+            <img src="images/meghan.jpg" class="mx-auto card-img-top crop" alt="Dr. Derek Shepherd" style="object-position: 50%; margin-top: 20px; width: 200px; height:200px;">
+            <div class="card-body">
+                <h5>Dr. Meghan Clark</h5>
+                <h6>Registered Veterinarian</h6>
+                <p class="card-text" style="margin-top: 20px;">Meghan Clark has been practicing small animal medicine for more than 10 years. She recently just graduated from the Veterinarian program at McMaster.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="bg-img">
+        <form action="" class="form-container">
+            <div class="container-md p-3 my-3 border pinkDye text-white">
+                <h3 id="bookAppoint" style="color:black"><img src="images/calender.png" width="70" height=auto> <u></u>Book an Appointment</h3>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="nameInput" placeholder="Enter Name"><br>
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="genderSelect">
+                <option disabled selected>Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group"><br>
+                <input type="phone" class="form-control" id="phoneInput" placeholder="Enter Mobile"><br>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="emailInput" placeholder="Enter Email"><br>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="serviceSelect">
+                    <option disabled selected>Select Service</option>
+                    <option>Ophthalmic Surgery</option>
+                    <option>Orthopaedic Surgery</option>
+                    <option>Cardiology Surgery</option>
+                    <option>Internal Organs Surgery</option>
+                    <option>Oncology Surgery</option>
+                  </select><br>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="doctorSelect"><br>
+                    <option disabled selected>Select Doctor</option>
+                    <option>Dr. Anne Limnae</option>
+                    <option>Dr. Cameron Roy</option>
+                    <option>Dr. Meghan Clark</option>
+                  </select>
+                  <br>
+            </div>
+            <div class="form-group">
+                <label class="control-label"><strong>Appointment Details</strong></label>
+                <div>
+                    <p class="float-left">Date: <input type="text" id="datepicker" class="datePicked"> &nbsp; </p>
+                    <p>Time: <input type="text" id="timepicker"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label"><strong>Credit Card Information</strong></label>
+                <div>
+                    <p class="float-left">Card Number: <input placeholder="16 digit number" maxlength="16" type="text" id="CreditCard"> &nbsp; </p>
+                    <p class="float-left">CVC: &nbsp;<input maxlength="3" placeholder="123" type="text" id="CVC"> &nbsp; </p>
+                    <p>Exp Date: <input maxlength="7" placeholder="mm/yy" type="text" id="ExpDate"> &nbsp; </p>
+                </div>
+            </div>
+            <div id="phone_error" class="error hidden" width="70%" height="70%" style="color: red;"></div>
+            <div class="form-group">
+                <br>
+                <button type="button" id="Final" style="background-color: #FFC0CB ;" class="btn" onclick="validateAll()" >BOOK APPOINTMENT</button>
+            </div><br>
+          </form>
+    </div>
+
+    <!-- <div id="myModal" class="modal">
+
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="modal-info">Default</p>
+        </div>
+      
+    </div> -->
+
+
+    </div>
+
+</body>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About Us</h6>
+          <p class="text-justify">Our practice is built upon the principles of compassionate and high-calibre care, with an emphasis on tailoring each treatment plan to the unique needs and lifestyle of the patient. We treat every patient as an individual and stay way from a cookie-cutter approach in all aspects of our medical care. We aim to collaborate with our clients, and build long-lasting relationships with them. Owners say that they feel a true sense of partnership with our team. And we strive to live up to their expectations each and every day.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Resources</h6>
+          <ul class="footer-links">
+            <li><a href="https://en.wikipedia.org/wiki/Veterinary_surgery">Surgerys</a></li>
+            <li><a href="https://pets.webmd.com/features/your-pet-veterinarian#1">Checkups</a></li>
+            <li><a href="https://www.petmd.com/symptom-checker/">Self diagnosis</a></li>
+            <li><a href="https://www.hillspet.com/pet-care/routine-care/10-responsible-pet-care-tips">Tips</a></li>
+            <!-- <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li> -->
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#topbar">Our Location</a></li>
+            <li><a href="#ourService">Our Services</a></li>
+            <li><a href="#vets-title">Meet the Team</a></li>
+            <li><a href="#bookAppoint">Book an Appointment</a></li>
+            <!-- <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <!-- <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+       <a href="#">Scanfcode</a>.
+          </p> -->
+        </div>
+
+        <!-- <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div> -->
+      </div>
+    </div>
+</footer> 
+
+<!-- <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class = "h1">Test</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="h5" id= "confirmTest">test</p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+</div> -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body" style="text-align: center;">
+                <p class="h5" id="fullName">test</p>
+                <p class="h5" id="emailChoice">test</p>
+                <p class="h5" id="doctorChoice">test</p>
+                <p class="h5" id="serviceChoice">test</p>
+                <p class="h5" id="dateChoice">test</p>
+                <p class="h5" id="timeChoice">test</p>
+                <img width="50%" height="50%" src="images/qrcode.png" alt="qrcode">
+                <p class="h5" id="confirmationCode">test</p>
+            </div>
+
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
